@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="start modal-start">
+        <h1>Hello Players!</h1>
+        <p>This is the Hangman's game built purely with JavaScript, HTML and styled with CSS.</p>
+        <h2>RULES</h2>
+        <p>This game is supposed to be played by 2 people. One clicks on the "Word Here" button, inputs a theme and it'll be displayed on the screen as well as the word's characters' amount, for the other player to guess.</p>
+        <p>The first player to play is "Player 1", you have the maximum tries of 6, after those, the hangman will die!</p>
+        <p>When either of you win or lose, click "New Game" and a new game will generate.</p>
+        <p>You can keep playing infinitely!</p>
+        <p>PS.: Do <mark>NOT</mark> use spaces in a word. This game is to be played solely with one word to be guessed.</p>
+        <p>Have fun! Remember to check my  <a href="https://github.com/IsabelGarcia13/" target="_blank">GitHub page</a> for more info on this project!</p>
+        <button type="button" class="btn btn-start btn-remove-screen">☢️Start Game</button>
+    </div>
+    <header>
+        <h1>Jogo da forca</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="left">
+                <div class="player player--0">
+                    <h2>Player 1</h2>
+                    <p class="score" id="player-0-score">44</p>
+                </div>
+            </div>
+            <div class="mid">
+                <div class="btns-group">
+                    <button class="btn btn-word-input">✏️Word Here</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="player player--1 player-active">
+                    <h2>Player 2</h2>
+                    <p class="score" id="player-1-score">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="board">
+                <div class="theme">
+                    <h6>Theme: <span class="theme-display">okidoki</span></h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="board">
+                <div class="word">
+                    <div class="row">
+                        <div class="display-word">
+                            P _ r _ _ _ a _
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="display-letters">
+                            O B S I K Y W
+                        </div>
+                    </div>
+                </div>
+                <div class="forca">
+                    <img src="imgs/hangman-0.png" alt="forca" title="forca" id="image-forca">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="guess-word">
+                <h6>Do you think you know the answer?</h6>
+                <input type="text" name="guess the word" placeholder="Guess here" id="input-guess"> 
+                <button class="btn btn-submit" type="button">OK!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 class="hello">
+            Hello Player!
+            <p> 
+                Have fun on your game. 😉
+                <br> 
+                The other player has 6 tries to get the Word right! Each time they fail, one body part will be added to the hangman's noose.
+                <br>
+                Do not let the man get hanged!
+            </p>
+        </h1>
+        <h1>Write the theme of your word</h1>
+        <input type="password" id="input-theme">
+        <h1>Write your word to be guessed below</h1>
+        <input type="password" id="input-word">
+        <br>
+        <button class="btn btn-submit" id="submit-word">OK!</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <div class="game-over modal hidden">
+        <h1 class="game-over-txt">
+            Game Over
+            <p>
+                The man was hanged!
+                <br>
+                You have failed him...
+            </p>
+        </h1>
+        <img src="imgs/GameOverPicture.png" alt="Player Lost" title="Player Lost" id="game-over-picture">
+        <br>
+        <button class="btn btn-new" id="new1">🔄New Game</button>
+    </div>
+
+    <div class="game-won hidden">
+        <h1 class="game-won-txt">
+            You won this round!!!
+            <br>
+            <p>
+                🏆 
+                <br>
+                The man was saved and he's eating McDonald's for dinner!
+            </p>
+        </h1>
+        <img src="imgs/GameWonPicture.png" alt="Player Won" title="Player Won" id="game-won-picture">
+        <br>
+        <button class="btn btn-new" id="new2">🔄New Game</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

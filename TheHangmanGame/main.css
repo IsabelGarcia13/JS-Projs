@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root{
+    --active-player: #BE3636;
+    --inactive-player: #9698A2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    background-image: linear-gradient(to top left, #DAD7DA 10%, #9698A2 90%);
+    align-items: center;
+    justify-content: center;
+    box-sizing: margin-box;
+    padding: 10px;
+}
+/* #CDBDEB */
+
+.start{
+    height: 100%;
+    width: 100%;
+    font-size: 64px;
+}
+
+.start h1{
+    color: var(--active-player);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.start p{
+    padding: 10px;
+}
+
+.start button{
+    margin-left: 45%;
+    margin-top: 30px;
+}
+
+.start a{
+    color: var(--active-player);
+}
+
+header{
+    font-size: 32px;
+    font-weight: 800;
+    border: 1px black solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to top left, #9E0505 10%, #BE3636 90%);
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.player{
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: var(--inactive-player);
+    /* box-shadow: 0 1.75rem 3.5rem rgba(204, 65, 65, 0.781); */
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+.player-active{
+    background-color: var(--active-player);
+}
+
+.score{
+    font-size: 64px;
+    font-weight: 300;
+    color: white;
+}
+
+.row{
+    margin-top: 10px;
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.left{
+    float: left;
+    width: 33.33%;
+}
+
+.mid{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.right{
+    float: left;
+    width: 33.33%;
+}
+
+.btn{
+    background-color: #e7e7e7b7;
+    border: 1px rgba(0, 0, 0, 0.486) solid;
+    border-radius: 15px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn-new, .btn-word-input, .btn-start{
+    margin-top: 10px;
+    font-size: 44px;
+}
+
+.btn-submit{
+    background-color: #BE3636;
+}
+
+input{
+    font-size: 32px;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hello{
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+} 
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: white;
+    height: auto;
+    width: 50%;
+    padding: 25px;
+    text-align: center;
+    z-index: 10;
+}
+
+.modal-start{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: var(--inactive-player);
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    z-index: 10;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0rem;
+    right: 1.5rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+.board {
+    padding: 20px;
+}
+
+.word {
+    width: 70%;
+    float: left;
+    
+}
+
+.display-word{
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+.theme{
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: var(--inactive-player);
+}
+
+.display-letters{
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.295);
+}
+
+.guess-word{
+    width: 70%;
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+.forca{
+    width: 30%;
+    float: left;
+    padding: 30px;
+}
+
+
+.game-over, .game-won{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 16px 14px 20px 14px #9698A2;
+    background-color: #DAD7DA;
+    height: 700px;
+    width: 50%;
+    padding: 25px;
+    text-align: center;
+    z-index: 10;
+}
+
+.game-over-txt{
+    font-size: 5em;
+    color: #9E0505;
+}
+
+.game-won-txt{
+    font-size: 3rem;
+    color: #9698A2;
+}
+        
+#game-over-picture, #game-won-picture{
+    margin: 40px;
+    max-width: 256px;
+}
