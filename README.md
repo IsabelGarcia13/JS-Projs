@@ -12,3 +12,7 @@ To have a fully functional weather app you'll need to do the following:
 
 ```const configApiKey = 'YourApiKeyHere';```
 
+## The Hangman Game
+A fun game to play on your local machine with a friend.
+The rules and advice for the game are displayed on the page's load.
+    -Have Fun!!!
