@@ -1,10 +1,9 @@
 # Ohayo
 
-## Olá
-
 Thank you for being interested in my coding journey!
+Keep in mind the following instructions to be able to work with these projects.
 
-# Weather app
+## Weather app
 To have a fully functional weather app you'll need to do the following:
 
 > 1st: create a 'config.js' file
