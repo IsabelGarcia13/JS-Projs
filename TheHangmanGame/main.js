@@ -36,13 +36,9 @@ let arrCharacters = [];
 let arrDisplay = [];
 let activePlayer = 0;
 
-//Starting conditions
-btnStartScreen.addEventListener('click', function(){
-    startScreen.classList.add('hidden');
-    startGame();
-})
 
-//Starting game
+
+//Starting conditions
 const startGame = function () {
     gameOverHidden.classList.add('hidden');
     gameWonHidden.classList.add('hidden');
@@ -66,6 +62,11 @@ const startGame = function () {
     activePlayer = 0;
     console.log('started game');
 }
+
+
+//Starting game
+startGame();
+
 
 const gameOver = function() {
     //show game over screen and New Game Button

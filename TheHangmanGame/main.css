@@ -19,7 +19,6 @@ html{
 body{
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    height: 100vh;
     background-image: linear-gradient(to top left, #DAD7DA 10%, #9698A2 90%);
     align-items: center;
     justify-content: center;
@@ -27,31 +26,6 @@ body{
     padding: 10px;
 }
 /* #CDBDEB */
-
-.start{
-    height: 100%;
-    width: 100%;
-    font-size: 64px;
-}
-
-.start h1{
-    color: var(--active-player);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.start p{
-    padding: 10px;
-}
-
-.start button{
-    margin-left: 45%;
-    margin-top: 30px;
-}
-
-.start a{
-    color: var(--active-player);
-}
 
 header{
     font-size: 32px;
@@ -70,10 +44,11 @@ header{
     border-radius: 15px;
     background-color: var(--inactive-player);
     /* box-shadow: 0 1.75rem 3.5rem rgba(204, 65, 65, 0.781); */
-    padding: 30px;
+    padding: 20px;
     font-size: 40px;
     text-align: center;
     box-shadow: 16px 14px 20px #0000008c;
+    height: 170px;
 }
 
 .player-active{
@@ -81,7 +56,7 @@ header{
 }
 
 .score{
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 300;
     color: white;
 }
@@ -96,17 +71,20 @@ header{
 .left{
     float: left;
     width: 33.33%;
+    height: 150px;
 }
 
 .mid{
     float: left;
     width: 33.33%;
     text-align: center;
+    height: 150px;
 }
 
 .right{
     float: left;
     width: 33.33%;
+    height: 150px;
 }
 
 .btn{
@@ -167,20 +145,6 @@ input{
     background-color: white;
     height: auto;
     width: 50%;
-    padding: 25px;
-    text-align: center;
-    z-index: 10;
-}
-
-.modal-start{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    background-color: var(--inactive-player);
-    height: 100%;
-    width: 100%;
     padding: 25px;
     text-align: center;
     z-index: 10;
@@ -253,6 +217,9 @@ input{
     padding: 30px;
 }
 
+.forca img{
+    height: 190px;
+}
 
 .game-over, .game-won{
     position: absolute;
@@ -283,3 +250,4 @@ input{
     margin: 40px;
     max-width: 256px;
 }
+
